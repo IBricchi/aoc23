@@ -1,0 +1,5 @@
+[gobi]
+recipes = ["project-manager"]
+
+[gobi.projects]
+day2 = "/home/ibricchi/aoc23/day2/gobi.toml"
