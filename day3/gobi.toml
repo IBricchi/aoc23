@@ -1,0 +1,34 @@
+[gobi]
+recipes = ["shell", "sequence"]
+
+[shell.gobi.eval-env]
+BASE_DIR="realpath ."
+
+[shell.gobi]
+cwd = "${BASE_DIR}"
+
+[shell.b1]
+command = """
+    clang++ p1.cpp -o p1 -std=c++23 -O3 -I../include
+"""
+
+[shell.r1]
+command = """
+    cat i1.txt | ./p1
+"""
+
+[sequence.br1]
+subactions = ["b1", "r1"]
+
+[shell.b2]
+command = """
+    clang++ p2.cpp -o p2 -std=c++23 -O3 -I../include
+"""
+
+[shell.r2]
+command = """
+    cat i1.txt | ./p2
+"""
+
+[sequence.br2]
+subactions = ["b2", "r2"]

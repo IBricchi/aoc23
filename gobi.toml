@@ -4,3 +4,4 @@ recipes = ["project-manager"]
 [gobi.projects]
 day2 = "/home/ibricchi/aoc23/day2/gobi.toml"
 day1 = "/home/ibricchi/aoc23/day1/gobi.toml"
+day3 = "/home/ibricchi/aoc23/day3/gobi.toml"
