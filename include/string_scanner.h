@@ -18,7 +18,7 @@ public:
         while (str[pos] != c && str[pos] != '\0') {
             pos++;
         }
-        if (str[pos] != '\0') {
+        while (str[pos] == c && str[pos] != '\0') {
             pos++;
         }
         return str[pos];
